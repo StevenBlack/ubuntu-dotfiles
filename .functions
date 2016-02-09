@@ -14,6 +14,7 @@ function calc() {
 		printf "$result"
 	fi
 	printf "\n"
+}
 
 # Create a new directory and enter it
 function md() {
