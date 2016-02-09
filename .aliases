@@ -16,7 +16,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+
 fi
+
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -59,3 +63,5 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="lwp-request -m '$method'"
 done
+# Speed test.  Source http://osxdaily.com/2013/07/31/speed-test-command-line/
+alias speedtest='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
